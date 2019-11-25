@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stm32f10x_gpio.h": "c",
+        "delay.h": "c",
+        "led.h": "c",
+        "stm32f10x.h": "c",
+        "button.h": "c",
+        "stm32f10x_rcc.h": "c",
+        "stm32f10x_usart.h": "c"
+    }
+}
