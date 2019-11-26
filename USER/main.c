@@ -2,7 +2,8 @@
 /* Module select */
 // #define __LED_TEST__
 // #define __BUTTON_TEST__
-#define __UART_TEST__
+#define __EXTI_TEST__
+// #define __UART_TEST__
 
 
 
@@ -15,6 +16,9 @@
 #elif (defined __UART_TEST__)
 	#include "Uart.h"
 	#define TEST_FUNC()			Uart_show()
+#elif (defined __EXTI_TEST__)
+	#include "Uart.h"
+	#define TEST_FUNC()			EXTI_show()
 #endif
 
 int main(int argc, char const *argv[])
