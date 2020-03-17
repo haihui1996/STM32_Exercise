@@ -46,7 +46,10 @@ void Led_show(void)
 */
 void led_init(void)
 {
+    /* 使能GPIOA时钟 */
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+
+    /* 配置LED引脚 */
     LED_Pin.GPIO_Pin    = GPIO_Pin_8;
     LED_Pin.GPIO_Mode   = GPIO_Mode_Out_PP;
     LED_Pin.GPIO_Speed  = GPIO_Speed_50MHz;

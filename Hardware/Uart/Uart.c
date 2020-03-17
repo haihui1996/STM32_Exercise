@@ -11,7 +11,7 @@ static GPIO_InitTypeDef UART_Pin;
 void Uart_show(void)
 {
     Uart_init();
-    printf("HelloWorld\r\n");
+    myprintf("HelloWorld\r\n");
 }
 void Uart_init(void)
 {
@@ -27,13 +27,13 @@ void Uart_init(void)
     UART_Pin.GPIO_Mode = GPIO_Mode_AF_OD;
     UART_Pin.GPIO_Pin  = GPIO_Pin_9;
     UART_Pin.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA; &UART_Pin);
+    GPIO_Init(GPIOA, &UART_Pin);
     
     /* Rx:浮空输入 */
     UART_Pin.GPIO_Mode = GPIO_Mode_IN_FLOATING;
     UART_Pin.GPIO_Pin  = GPIO_Pin_10;
     UART_Pin.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA; &UART_Pin);
+    GPIO_Init(GPIOA, &UART_Pin);
 
     /**
      *  初始化串口 
@@ -53,7 +53,7 @@ void Uart_init(void)
 }
 
 
-void printf(uint8_t * bStr)
+void myprintf(const unsigned char * bStr)
 {
     uint16_t i;
     for ( i = 0; bStr[i] != '\0' ; i++)

@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10x_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\Hardware\LED;..\Hardware\Button</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\Hardware\LED;..\Hardware\Button;..\Hardware\Uart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -592,6 +592,11 @@
               <FileName>Button.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Hardware\Button\Button.c</FilePath>
+            </File>
+            <File>
+              <FileName>Uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\Uart\Uart.c</FilePath>
             </File>
           </Files>
         </Group>

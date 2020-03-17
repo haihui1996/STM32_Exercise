@@ -1,24 +1,30 @@
 
 /* Module select */
-// #define __LED_TEST__
-// #define __BUTTON_TEST__
-#define __UART_TEST__
+#define MODULE_SELECT		(4)
+
+#define __LED_TEST__		(1)
+#define __BUTTON_TEST__		(2)
+#define __EXTI_TEST__		(3)
+#define __UART_TEST__		(4)
 
 
 
-#if (defined __LED_TEST__)
+#if (MODULE_SELECT == __LED_TEST__)
 	#include "led.h"
 	#define TEST_FUNC()			Led_show()
-#elif (defined __BUTTON_TEST__)
+#elif (MODULE_SELECT == __BUTTON_TEST__)
 	#include "Button.h"
 	#define TEST_FUNC()			Button_show()
-#elif (defined __UART_TEST__)
+#elif (MODULE_SELECT == __UART_TEST__)
 	#include "Uart.h"
 	#define TEST_FUNC()			Uart_show()
+#elif (MODULE_SELECT == __EXTI_TEST__)
+	#include "Exit.h"
+	#define TEST_FUNC()			EXTI_show()
 #endif
 
 int main(int argc, char const *argv[])
 {
 	TEST_FUNC();
-	return 0;
+	while (1);	
 }
