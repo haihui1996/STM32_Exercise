@@ -7,10 +7,10 @@
 /////////////////////////////////////////////////////////////////////////////
 #ifndef __UART_H__
 #define __UART_H__
-
+#include <stdint.h>
 
 void Uart_show(void);
-void Uart_init(void);
+void Uart_init(uint16_t dwBoundRate);
 void myprintf(const unsigned char * bStr);
 
 #endif

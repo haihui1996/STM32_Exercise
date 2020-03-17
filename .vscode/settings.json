@@ -7,6 +7,7 @@
         "button.h": "c",
         "stm32f10x_rcc.h": "c",
         "stm32f10x_usart.h": "c",
-        "stm32f10x_exti.h": "c"
+        "stm32f10x_exti.h": "c",
+        "uart.h": "c"
     }
 }
